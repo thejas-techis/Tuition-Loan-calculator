@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <title>TECH I S Tuition Loan Calculator</title>
+  <link rel="icon" href="logo-icon-trans.png" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loan-calculator">
+      <div class="top">
+        <div class="top1">
+          <div class="logo">
+            <h1>TECH I S</h1>
+          </div>
+
+          <h2>Tuition Loan Calculator</h2>
+          <p>
+            Adjust the loan amount, Interest rate, and Repayment Details to Find
+            the Right Option for you. The Loan Calculator Displays Example
+            Monthly Payments. Loan options, Interest Rate, and APR depend on
+            Credit Profile and Program.
+          </p>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="calculate-btn">
+        <form action="#">
+          <div class="group">
+            <div class="title">Loan Amount</div>
+            <input
+              type="range"
+              min="0"
+              max="20000"
+              step="100"
+              value="0"
+              class="slider"
+              id="myRange"
+            />
+            <p>Value: <span id="demo"></span> $</p>
+          </div>
+
+          <div class="group" id="interest123">
+            <div class="title">Interest Rate %</div>
+            <input
+              type="range"
+              max="15.75"
+              min="6.99"
+              step="4.38"
+              value="0"
+              class="slider2"
+              id="myRange2"
+            />
+            <p>Value: <span id="demo2"></span> %</p>
+          </div>
+          <div class="group" id="interest12345">
+            <div class="title">Interest Rate %</div>
+
+            <input
+              type="range"
+              max="16.26"
+              min="7.5"
+              step="4.38"
+              value="0"
+              z
+              class="slider4"
+              id="myRange4"
+            />
+            <p>Value: <span id="demo4"></span> %</p>
+          </div>
+
+          <div class="group">
+            <div class="title">Loan Term</div>
+            <input
+              type="radio"
+              name="fav_language"
+              value="36"
+              id="myRange3"
+              class="slider3"
+              onclick="Show4()"
+            />
+            <p class="demo5"><span id="demo3"></span> Months</p>
+            <input
+              type="radio"
+              name="fav_language"
+              value="60"
+              id="myRange5"
+              class="slider5"
+              onclick="Show5()"
+            />
+
+            <p class="demo5"><span id="demo5"></span> Months</p>
+          </div>
+        </form>
+      </div>
+      <div class="result">
+        <div class="left">
+          <div class="loan-emi">
+            <div class="Loan1">
+              <h3>Monthly in-school Payments &nbsp</h3>
+              <div class="value">0</div>
+            </div>
+            <div class="Loan2">
+              <h3>Monthly post-school payments</h3>
+              <div class="value">0</div>
+            </div>
+          </div>
+
+          <div class="total-amount">
+            <div class="Loan1">
+              <h3>Total loan amount</h3>
+              <div class="value">0</div>
+            </div>
+            <div class="Loan2">
+              <h3>Total cost of loan</h3>
+              <div class="value">0</div>
+            </div>
+          </div>
+
+          <div class="total-interest">
+            <div class="Loan1">
+              <h3>Interest rate</h3>
+              <div class="value">0</div>
+            </div>
+            <div class="Loan2">
+              <h3>Annual % Rate</h3>
+              <div class="value">0</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <input
+            type="radio"
+            name="fav_language"
+            value="Immediate Repayment"
+            onclick="Show1()"
+            id="immediate-rep"
+            checked
+          />
+          <label class="immediatere" for="immediatere"
+            ><strong>Immediate Repayment</strong> </label
+          ><br />
+          <h6>Full payments in school</h6>
+          <input
+            type="radio"
+            name="fav_language"
+            value="Interest-Only Repayment"
+            onclick="Show3()"
+            id="immediate-rep"
+          />
+          <label for="intereston">
+            <strong>Interest-Only Repayment</strong></label
+          ><br />
+          <h6>Interest-Only payments in school</h6>
+          <input
+            type="radio"
+            name="fav_language"
+            value="Deferred Repayment"
+            onclick="Show2()"
+            id="immediate-rep"
+          />
+          <label for="deferredre"> <strong>Deferred Repayment</strong></label>
+          <h6>No payments in school</h6>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
