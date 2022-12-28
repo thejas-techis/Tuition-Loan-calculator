@@ -113,6 +113,13 @@ const calculateEMI1 = () => {
   return emi
 }
 
+const calculateEMI2 = () => {
+  checkValues();
+  refreshInputValues();
+  let emi = 0
+  return emi
+}
+
 const updateData = (emi, emi2) => {
   loanEMIValue1.innerHTML = Math.round(emi2? emi2: emi);
   loanEMIValue2.innerHTML = Math.round(emi);
@@ -126,8 +133,10 @@ const updateData = (emi, emi2) => {
 const init = () => {
   let emi = calculateEMI()
   let emi2 = tempX===3 ? calculateEMI1() : null
-  updateData(emi, emi2);
-};
+  let emi3 = tempX===2 ? calculateEMI2() : null
+
+  updateData(emi, emi2,emi3);
+}
 
 init();
 
@@ -140,6 +149,7 @@ calculateBtn.addEventListener("click", init);
 function Show1() {
   document.getElementById("interest123").style.display = "block";
   document.getElementById("interest12345").style.display = "none";
+
   tempX = 1
   refreshInputValues();
   calculateEMI()
@@ -158,13 +168,10 @@ function Show2() {
 function Show3() {
   document.getElementById("interest123").style.display = "block";
   document.getElementById("interest12345").style.display = "none";
-
   tempX = 3
   refreshInputValues();
   calculateEMI()
   init();
-
-
 }
 
 function Show4() {
@@ -173,8 +180,6 @@ function Show4() {
   refreshInputValues();
   calculateEMI()
   init();
-
-
 }
 
 function Show5() {
@@ -183,6 +188,4 @@ function Show5() {
   refreshInputValues();
   calculateEMI()
   init();
-
-
 }
