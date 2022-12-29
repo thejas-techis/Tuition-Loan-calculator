@@ -121,7 +121,7 @@ const calculateEMI2 = () => {
 }
 
 const updateData = (emi, emi2, emi3) => {
-  loanEMIValue1.innerHTML = Math.round(emi3? '':emi);
+  loanEMIValue1.innerHTML = Math.round(emi3? '':(emi2? emi2 : emi));
   loanEMIValue2.innerHTML = Math.round(emi);
   let totalAmount = Math.round(loanTenure * emi);
   totalAmountValue1.innerHTML = loanAmount;
