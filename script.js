@@ -89,7 +89,7 @@ const refreshInputValues = () => {
   interestRate = tempX === 2 ? parseFloat(interestRateInput2.value) : parseFloat(interestRateInput.value);
   loanTenure = tempX === 5 ? parseFloat(loanTenureInput2.value) : parseFloat(loanTenureInput.value);
   interest = interestRate / 12 / 100;
-  apr = interestRate + 3.56;
+  apr = (interestRate + 3.56).toFixed(2);
 };
 
 const calculateEMI = () => {
@@ -116,12 +116,12 @@ const calculateEMI1 = () => {
 const calculateEMI2 = () => {
   checkValues();
   refreshInputValues();
-  let emi = null
+  let emi = 'xyz'
   return emi
 }
 
-const updateData = (emi, emi2) => {
-  loanEMIValue1.innerHTML = Math.round(emi2? emi2: emi);
+const updateData = (emi, emi2, emi3) => {
+  loanEMIValue1.innerHTML = Math.round(emi3? '':emi);
   loanEMIValue2.innerHTML = Math.round(emi);
   let totalAmount = Math.round(loanTenure * emi);
   totalAmountValue1.innerHTML = loanAmount;
@@ -159,7 +159,7 @@ function Show1() {
 function Show2() {
   document.getElementById("interest12345").style.display = "block";
   document.getElementById("interest123").style.display = "none";
-  document.getElementById("zero").outerHTML = null;
+  // document.getElementById("zero").outerHTML = null;
   tempX = 2
   refreshInputValues();
   calculateEMI()
@@ -183,6 +183,7 @@ function Show4() {
   refreshInputValues();
   calculateEMI()
   init();
+  
 }
 
 function Show5() {
