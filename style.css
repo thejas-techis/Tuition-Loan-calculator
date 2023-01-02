@@ -79,7 +79,7 @@
 
   .loan-calculator .result .right {
     width: 100%;
-    padding: 30px 32px;
+    padding: 30px 20px;
   }
   
   /* .loan-calculator .right label {
@@ -102,19 +102,31 @@
     margin-right: 6px;
     opacity: 0.4;
   }
-  
-  /* .loan-calculator .calculate-btn {
-    background: blue;
-    color: #fff;
-    border: none;
-    padding: 8px 32px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 900;
-    cursor: pointer;
-    margin: 24px 0;
-  } */
-  
+
+  #value1::before {
+    content: "$";
+  }
+
+  #value2::before {
+    content: "$";
+  }
+
+  #value3::before {
+    content: "$";
+  }
+
+  #value4::before {
+    content: "$";
+  }
+
+  #value5::after {
+    content: "%";
+  }
+
+  #value6::after {
+    content: "%";
+  }
+
   .loan-calculator .right {
     width: 50%;
   }

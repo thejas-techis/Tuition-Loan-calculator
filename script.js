@@ -159,7 +159,6 @@ function Show1() {
 function Show2() {
   document.getElementById("interest12345").style.display = "block";
   document.getElementById("interest123").style.display = "none";
-  // document.getElementById("zero").outerHTML = null;
   tempX = 2
   refreshInputValues();
   calculateEMI()
