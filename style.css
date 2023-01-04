@@ -96,15 +96,18 @@
   }
   
   .loan-calculator .result .value::before {
-    /* content: "$"; */
     font-size: 24px;
     font-weight: 400;
     margin-right: 6px;
     opacity: 0.4;
   }
 
-  #value1::before {
+  #value1::before { 
     content: "$";
+    color: black;
+    opacity: 1;
+    font-weight: bold;
+    font-size: 30px;
   }
 
   #value2::after {
@@ -180,10 +183,6 @@ h6 {
   display: none;
 }
 
-/* #immediate-rep{
-  margin-bottom: 5vw;
-} */
-
 
 input.test {
   border-radius: 2vw;
@@ -226,4 +225,9 @@ hr {
 input#myRange {
   color: white;
   border: white;
+}
+
+p.amount {
+  position: relative;
+  bottom: 38px;
 }

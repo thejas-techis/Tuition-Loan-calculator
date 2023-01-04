@@ -124,8 +124,8 @@ const updateData = (emi, emi2, emi3) => {
   loanEMIValue1.innerHTML = Math.round(emi3? '':(emi2? emi2 : emi));
   loanEMIValue2.innerHTML = Math.round(emi);
   let totalAmount = Math.round(loanTenure * emi);
-  totalAmountValue1.innerHTML = loanAmount;
-  totalAmountValue2.innerHTML = totalAmount;
+  totalAmountValue1.innerHTML = loanAmount.toLocaleString("en-US");
+  totalAmountValue2.innerHTML = totalAmount.toLocaleString("en-US");
   totalInterestValue1.innerHTML = interestRate;
   totalInterestValue2.innerHTML = apr;
 };
